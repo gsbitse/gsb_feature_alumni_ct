@@ -40,6 +40,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'module' => 'field_collection',
           'settings' => array(
             'add' => 'Add',
+            'conditions' => array(),
             'delete' => 'Delete',
             'description' => TRUE,
             'edit' => 'Edit',
@@ -87,7 +88,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'maxlength_js_label' => '',
         ),
         'type' => 'field_collection_embed',
-        'weight' => '10',
+        'weight' => '11',
       ),
       'workbench_access_field' => 0,
     ),
@@ -129,7 +130,9 @@ function gsb_feature_alumni_ct_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'text_default',
           'weight' => 9,
         ),
@@ -181,7 +184,103 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '9',
+        'weight' => '10',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'node-alumni-field_company'.
+  $fields['node-alumni-field_company'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_company',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'alumni',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(
+            'conditions' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => 13,
+        ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'tiny' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_company',
+      'label' => 'Company',
+      'required' => 0,
+      'settings' => array(
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'maxlength_js' => 0,
+          'maxlength_js_label' => '',
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '5',
       ),
       'workbench_access_field' => 0,
     ),
@@ -226,7 +325,9 @@ function gsb_feature_alumni_ct_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'file',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'file_default',
           'weight' => 8,
         ),
@@ -274,7 +375,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '8',
+        'weight' => '9',
       ),
       'workbench_access_field' => 0,
     ),
@@ -318,7 +419,9 @@ function gsb_feature_alumni_ct_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'text_default',
           'weight' => 2,
         ),
@@ -413,6 +516,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'label' => 'above',
           'module' => 'image',
           'settings' => array(
+            'conditions' => array(),
             'image_link' => '',
             'image_style' => '',
           ),
@@ -468,7 +572,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '11',
+        'weight' => '12',
       ),
       'workbench_access_field' => 0,
     ),
@@ -512,7 +616,9 @@ function gsb_feature_alumni_ct_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'text_default',
           'weight' => 4,
         ),
@@ -607,7 +713,9 @@ function gsb_feature_alumni_ct_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'link',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'link_default',
           'weight' => 12,
         ),
@@ -670,7 +778,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'maxlength_js_label' => '',
         ),
         'type' => 'link_field',
-        'weight' => '12',
+        'weight' => '13',
       ),
       'workbench_access_field' => 0,
     ),
@@ -714,7 +822,9 @@ function gsb_feature_alumni_ct_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'text_default',
           'weight' => 5,
         ),
@@ -764,7 +874,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '5',
+        'weight' => '6',
       ),
       'workbench_access_field' => 0,
     ),
@@ -808,7 +918,9 @@ function gsb_feature_alumni_ct_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'text_default',
           'weight' => 3,
         ),
@@ -907,7 +1019,9 @@ function gsb_feature_alumni_ct_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => 6,
         ),
@@ -950,7 +1064,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'maxlength_js_label' => '',
         ),
         'type' => 'options_select',
-        'weight' => '6',
+        'weight' => '7',
       ),
       'workbench_access_field' => 0,
     ),
@@ -994,7 +1108,9 @@ function gsb_feature_alumni_ct_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'text_default',
           'weight' => 1,
         ),
@@ -1088,7 +1204,9 @@ function gsb_feature_alumni_ct_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'text_default',
           'weight' => 7,
         ),
@@ -1138,7 +1256,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '7',
+        'weight' => '8',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1149,6 +1267,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
   t('Academic Degrees');
   t('Bio');
   t('CV');
+  t('Company');
   t('First Name');
   t('Google Scholar Link');
   t('Last Name');
