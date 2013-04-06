@@ -10,6 +10,428 @@
 function gsb_feature_alumni_ct_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'field_collection_item-field_academic_degrees-field_degree_focus'.
+  $fields['field_collection_item-field_academic_degrees-field_degree_focus'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_degree_focus',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'field_academic_degrees',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(
+            'conditions' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => 4,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'tiny' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'field_collection_item',
+      'field_name' => 'field_degree_focus',
+      'label' => 'Focus',
+      'required' => 0,
+      'settings' => array(
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'maxlength_js' => 0,
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '3',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'field_collection_item-field_academic_degrees-field_degree_from_stanford'.
+  $fields['field_collection_item-field_academic_degrees-field_degree_from_stanford'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_degree_from_stanford',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => '',
+          1 => '',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'field_academic_degrees',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(
+            'conditions' => array(),
+          ),
+          'type' => 'list_default',
+          'weight' => 3,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'tiny' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'field_collection_item',
+      'field_name' => 'field_degree_from_stanford',
+      'label' => 'Is the degree from Stanford?',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'display_label' => 1,
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        ),
+        'type' => 'options_onoff',
+        'weight' => '4',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'field_collection_item-field_academic_degrees-field_degree_type'.
+  $fields['field_collection_item-field_academic_degrees-field_degree_type'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_degree_type',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          'BA' => 'BA',
+          'BS' => 'BS',
+          'MA' => 'MA',
+          'MBA' => 'MBA',
+          'MS' => 'MS',
+          'PhD' => 'PhD',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'field_academic_degrees',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(
+            'conditions' => array(),
+          ),
+          'type' => 'list_default',
+          'weight' => 0,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'tiny' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'field_collection_item',
+      'field_name' => 'field_degree_type',
+      'label' => 'Degree Type',
+      'required' => 1,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        ),
+        'type' => 'options_select',
+        'weight' => '0',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'field_collection_item-field_academic_degrees-field_university'.
+  $fields['field_collection_item-field_academic_degrees-field_university'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_university',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'field_academic_degrees',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(
+            'conditions' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => 1,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'tiny' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'field_collection_item',
+      'field_name' => 'field_university',
+      'label' => 'University',
+      'required' => 1,
+      'settings' => array(
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'maxlength_js' => 0,
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '1',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'field_collection_item-field_academic_degrees-field_year'.
+  $fields['field_collection_item-field_academic_degrees-field_year'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_year',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'date',
+      'settings' => array(
+        'cache_count' => '4',
+        'cache_enabled' => 0,
+        'granularity' => array(
+          'day' => 0,
+          'hour' => 0,
+          'minute' => 0,
+          'month' => 0,
+          'second' => 0,
+          'year' => 'year',
+        ),
+        'repeat' => '0',
+        'timezone_db' => '',
+        'todate' => '',
+        'tz_handling' => 'none',
+      ),
+      'translatable' => '0',
+      'type' => 'datetime',
+    ),
+    'field_instance' => array(
+      'bundle' => 'field_academic_degrees',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'date',
+          'settings' => array(
+            'conditions' => array(),
+            'format_type' => 'long',
+            'fromto' => 'both',
+            'multiple_from' => '',
+            'multiple_number' => '',
+            'multiple_to' => '',
+            'show_repeat_rule' => 'show',
+          ),
+          'type' => 'date_default',
+          'weight' => 2,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'tiny' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'field_collection_item',
+      'field_name' => 'field_year',
+      'label' => 'Graduation Year',
+      'required' => 1,
+      'settings' => array(
+        'default_value' => 'now',
+        'default_value2' => 'same',
+        'default_value_code' => '',
+        'default_value_code2' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'date',
+        'settings' => array(
+          'display_all_day' => 0,
+          'increment' => 15,
+          'input_format' => 'Y-m-d H:i:s',
+          'input_format_custom' => '',
+          'label_position' => 'above',
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'repeat_collapsed' => 0,
+          'text_parts' => array(),
+          'year_range' => '-3:+3',
+        ),
+        'type' => 'date_text',
+        'weight' => '2',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
   // Exported field: 'node-alumni-field_academic_degrees'.
   $fields['node-alumni-field_academic_degrees'] = array(
     'field_config' => array(
@@ -88,7 +510,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'maxlength_js_label' => '',
         ),
         'type' => 'field_collection_embed',
-        'weight' => '11',
+        'weight' => '10',
       ),
       'workbench_access_field' => 0,
     ),
@@ -184,7 +606,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '10',
+        'weight' => '11',
       ),
       'workbench_access_field' => 0,
     ),
@@ -281,101 +703,6 @@ function gsb_feature_alumni_ct_field_default_fields() {
         ),
         'type' => 'text_textfield',
         'weight' => '5',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'node-alumni-field_file_single_public'.
-  $fields['node-alumni-field_file_single_public'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_file_single_public',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'file',
-      'settings' => array(
-        'display_default' => 0,
-        'display_field' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'file',
-    ),
-    'field_instance' => array(
-      'bundle' => 'alumni',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'file',
-          'settings' => array(
-            'conditions' => array(),
-          ),
-          'type' => 'file_default',
-          'weight' => 8,
-        ),
-        'featured' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'tiny' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_file_single_public',
-      'label' => 'CV',
-      'required' => 0,
-      'settings' => array(
-        'description_field' => 0,
-        'file_directory' => 'CV',
-        'file_extensions' => 'pdf',
-        'max_filesize' => '',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'file',
-        'settings' => array(
-          'maxlength_js_label' => '',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'file_generic',
-        'weight' => '9',
       ),
       'workbench_access_field' => 0,
     ),
@@ -548,6 +875,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'weight' => 0,
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_image_single_public',
       'label' => 'Photo',
@@ -555,7 +883,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
       'settings' => array(
         'alt_field' => 0,
         'default_image' => 0,
-        'file_directory' => 'person_photos',
+        'file_directory' => 'person-photos',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
@@ -572,7 +900,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '12',
+        'weight' => '9',
       ),
       'workbench_access_field' => 0,
     ),
@@ -674,116 +1002,6 @@ function gsb_feature_alumni_ct_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-alumni-field_link_google_scholar'.
-  $fields['node-alumni-field_link_google_scholar'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_link_google_scholar',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'alumni',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'link',
-          'settings' => array(
-            'conditions' => array(),
-          ),
-          'type' => 'link_default',
-          'weight' => 12,
-        ),
-        'featured' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'tiny' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_link_google_scholar',
-      'label' => 'Google Scholar Link',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => '_blank',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 0,
-        'linkit' => array(
-          'enable' => 0,
-          'insert_plugin' => '',
-        ),
-        'title' => 'none',
-        'title_maxlength' => '128',
-        'title_value' => '',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(
-          'maxlength_js_label' => '',
-        ),
-        'type' => 'link_field',
-        'weight' => '13',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
   // Exported field: 'node-alumni-field_location'.
   $fields['node-alumni-field_location'] = array(
     'field_config' => array(
@@ -874,7 +1092,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '6',
+        'weight' => '7',
       ),
       'workbench_access_field' => 0,
     ),
@@ -980,7 +1198,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
   $fields['node-alumni-field_program'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_program',
@@ -1050,6 +1268,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'weight' => 0,
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_program',
       'label' => 'Program',
@@ -1063,8 +1282,8 @@ function gsb_feature_alumni_ct_field_default_fields() {
         'settings' => array(
           'maxlength_js_label' => '',
         ),
-        'type' => 'options_select',
-        'weight' => '7',
+        'type' => 'options_buttons',
+        'weight' => '8',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1256,7 +1475,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '8',
+        'weight' => '6',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1266,10 +1485,12 @@ function gsb_feature_alumni_ct_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Academic Degrees');
   t('Bio');
-  t('CV');
   t('Company');
+  t('Degree Type');
   t('First Name');
-  t('Google Scholar Link');
+  t('Focus');
+  t('Graduation Year');
+  t('Is the degree from Stanford?');
   t('Last Name');
   t('Location');
   t('Middle Name');
@@ -1277,6 +1498,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
   t('Program');
   t('Salutation');
   t('Title/Position');
+  t('University');
 
   return $fields;
 }
