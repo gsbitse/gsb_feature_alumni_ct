@@ -351,17 +351,17 @@ function gsb_feature_alumni_ct_field_default_fields() {
         'cache_count' => '4',
         'cache_enabled' => 0,
         'granularity' => array(
-          'day' => 0,
-          'hour' => 0,
-          'minute' => 0,
-          'month' => 0,
+          'day' => 'day',
+          'hour' => 'hour',
+          'minute' => 'minute',
+          'month' => 'month',
           'second' => 0,
           'year' => 'year',
         ),
         'repeat' => '0',
-        'timezone_db' => '',
+        'timezone_db' => 'UTC',
         'todate' => '',
-        'tz_handling' => 'none',
+        'tz_handling' => 'site',
       ),
       'translatable' => '0',
       'type' => 'datetime',
@@ -612,34 +612,39 @@ function gsb_feature_alumni_ct_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-alumni-field_company'.
-  $fields['node-alumni-field_company'] = array(
+  // Exported field: 'node-alumni-field_company_organization'.
+  $fields['node-alumni-field_company_organization'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_company',
+      'field_name' => 'field_company_organization',
       'foreign keys' => array(
-        'format' => array(
+        'tid' => array(
           'columns' => array(
-            'format' => 'format',
+            'tid' => 'tid',
           ),
-          'table' => 'filter_format',
+          'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'format' => array(
-          0 => 'format',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'text',
+      'module' => 'taxonomy',
       'settings' => array(
-        'max_length' => '255',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'company_organization',
+            'parent' => '0',
+          ),
+        ),
       ),
       'translatable' => '0',
-      'type' => 'text',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'alumni',
@@ -649,12 +654,12 @@ function gsb_feature_alumni_ct_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
+          'module' => 'taxonomy',
           'settings' => array(
             'conditions' => array(),
           ),
-          'type' => 'text_default',
-          'weight' => 13,
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 12,
         ),
         'featured' => array(
           'label' => 'above',
@@ -681,27 +686,23 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'weight' => 0,
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'node',
-      'field_name' => 'field_company',
-      'label' => 'Company',
+      'field_name' => 'field_company_organization',
+      'label' => 'Company Organization',
       'required' => 0,
       'settings' => array(
-        'linkit' => array(
-          'enable' => 0,
-          'insert_plugin' => '',
-        ),
-        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 1,
-        'module' => 'text',
+        'active' => 0,
+        'module' => 'taxonomy',
         'settings' => array(
-          'maxlength_js' => 0,
-          'maxlength_js_label' => '',
-          'size' => '60',
+          'autocomplete_path' => 'taxonomy/autocomplete',
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'size' => 60,
         ),
-        'type' => 'text_textfield',
+        'type' => 'taxonomy_autocomplete',
         'weight' => '5',
       ),
       'workbench_access_field' => 0,
@@ -1485,7 +1486,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Academic Degrees');
   t('Bio');
-  t('Company');
+  t('Company Organization');
   t('Degree Type');
   t('First Name');
   t('Focus');
