@@ -878,7 +878,7 @@ function gsb_feature_alumni_ct_field_default_fields() {
             'image_style' => '170x170',
           ),
           'type' => 'image',
-          'weight' => '2',
+          'weight' => '0',
         ),
         'tiny' => array(
           'label' => 'above',
