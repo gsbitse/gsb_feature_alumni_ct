@@ -98,10 +98,8 @@ function gsb_feature_alumni_ct_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'lb' => 'of',
-          'lb-col' => TRUE,
           'ow' => TRUE,
-          'ow-el' => 'span',
+          'ow-el' => 'div',
           'ow-cl' => 'person-area',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
@@ -153,7 +151,7 @@ function gsb_feature_alumni_ct_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
-          'ow-el' => 'span',
+          'ow-el' => 'div',
           'ow-cl' => 'person-title',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
@@ -224,8 +222,8 @@ function gsb_feature_alumni_ct_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_image_single_public',
-        1 => 'field_first_name',
-        2 => 'group_wrapper_name',
+        1 => 'group_wrapper_name',
+        2 => 'field_first_name',
         3 => 'field_middle_name',
         4 => 'group_wrapper_position',
         5 => 'field_last_name',
@@ -235,8 +233,8 @@ function gsb_feature_alumni_ct_ds_layout_settings_info() {
     ),
     'fields' => array(
       'field_image_single_public' => 'ds_content',
-      'field_first_name' => 'ds_content',
       'group_wrapper_name' => 'ds_content',
+      'field_first_name' => 'ds_content',
       'field_middle_name' => 'ds_content',
       'group_wrapper_position' => 'ds_content',
       'field_last_name' => 'ds_content',

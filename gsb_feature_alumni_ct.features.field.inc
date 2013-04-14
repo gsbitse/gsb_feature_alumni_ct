@@ -725,12 +725,12 @@ function gsb_feature_alumni_ct_field_default_fields() {
           'weight' => '6',
         ),
         'teaser' => array(
-          'label' => 'inline',
-          'module' => 'hs_taxonomy',
+          'label' => 'hidden',
+          'module' => 'taxonomy',
           'settings' => array(
             'conditions' => array(),
           ),
-          'type' => 'hs_taxonomy_term_reference_hierarchical_text',
+          'type' => 'taxonomy_term_reference_link',
           'weight' => '6',
         ),
         'tiny' => array(
